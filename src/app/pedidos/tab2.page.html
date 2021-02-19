@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pedidos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card *ngFor="let pedido of pedidos">
+    <ion-card-header (click)="openPedido(pedido)">
+      <ion-card-subtitle>{{ pedido.fecha }}</ion-card-subtitle>
+      <ion-card-title>Pedido: {{ pedido.id }} TOTAL: {{ pedido.price }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+</ion-content>
